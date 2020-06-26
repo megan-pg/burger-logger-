@@ -1,6 +1,1 @@
-INSERT INTO users (username, password) 
-VALUES 
-    ("KyleW", "Test123"),
-    ("MisterNixon", "hithere34"),
-    ("LexieTuTu", "nixdes"),
-    ("Papa", "lovesfam");
+INSERT INTO burger(burger_name, devoured) VALUES ('cheeseburger', true); 
