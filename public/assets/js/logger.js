@@ -1,6 +1,6 @@
 $(function () {
     $(".change-eaten").on("click", function (event) {
-        var id = $(this).data("id");
+        const id = $(this).data("id");
         var newEat = $(this).data("neweat");
 
         var newEatState = {
@@ -8,7 +8,7 @@ $(function () {
         };
 
         // Send the PUT request.
-        $.ajax("/api/index/" + id, {
+        $.ajax("/api/logger/" + id, {
             type: "PUT",
             data: newEatState
         }).then(
@@ -34,7 +34,7 @@ $(function () {
         };
 
         // Send the POST request.
-        $.ajax("/api/index", {
+        $.ajax("/api/logger", {
             type: "POST",
             data: newBurger,
         }).then(
@@ -53,7 +53,7 @@ $(function () {
         let id = $(this).data("id");
 
         // Send the DELETE request.
-        $.ajax("/api/index/" + id, {
+        $.ajax("/api/logger/" + id, {
             type: "DELETE"
         }).then(
             function () {
